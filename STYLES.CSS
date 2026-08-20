@@ -9,7 +9,7 @@
 
 body {
   background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-  color: #f8fafc;
+  color: #3c87d3;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ body {
 }
 
 .cabecalho nav a {
-  color: #94a3b8;
+  color: #b094b8;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
