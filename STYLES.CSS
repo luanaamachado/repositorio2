@@ -18,7 +18,6 @@ body {
   padding: 20px;
 }
 
-/* Cabeçalho */
 .cabecalho {
   text-align: center;
   padding: 20px 0;
@@ -42,7 +41,6 @@ body {
   color: #38bdf8;
 }
 
-/* Conteúdo Principal */
 main {
   display: flex;
   flex-direction: column;
@@ -57,7 +55,6 @@ h2 {
   text-align: center;
 }
 
-/* Cartão com efeito 3D */
 .cartao {
   width: 320px;
   height: 420px;
@@ -101,7 +98,6 @@ h2 {
   border-color: #38bdf8;
 }
 
-/* Imagens e vídeos dentro do cartão */
 .cartao-imagem {
   width: 100%;
   height: 250px;
@@ -109,14 +105,12 @@ h2 {
   overflow: hidden;
 }
 
-/* Textos dentro do cartão */
 .cartao-frente p, .cartao-verso p {
   font-size: 0.95rem;
   line-height: 1.4;
   color: #e2e8f0;
 }
 
-/* Rodapé */
 footer {
   text-align: center;
   padding: 20px 0;
