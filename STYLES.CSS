@@ -1,25 +1,125 @@
-.cabecalho {
-    padding: 15px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-.cartao {
-    width: 260px;
-    height: 200px;
-}
-
-.cartao-imagem {
-    width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
+/* Cabeçalho */
+.cabecalho {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.cabecalho h1 {
+  font-size: 2.5rem;
+  color: #38bdf8;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+  margin-bottom: 8px;
+}
+
+.cabecalho nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.cabecalho nav a:hover {
+  color: #38bdf8;
+}
+
+/* Conteúdo Principal */
 main {
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #cbd5e1;
+  text-align: center;
+}
+
+/* Cartão com efeito 3D */
+.cartao {
+  width: 320px;
+  height: 420px;
+  perspective: 1000px;
+}
+
+.cartao-interno {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.cartao:hover .cartao-interno {
+  transform: rotateY(180deg);
+}
+
+.cartao-frente, .cartao-verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+.cartao-verso {
+  transform: rotateY(180deg);
+  background: rgba(15, 23, 42, 0.95);
+  border-color: #38bdf8;
+}
+
+/* Imagens e vídeos dentro do cartão */
+.cartao-imagem {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Textos dentro do cartão */
+.cartao-frente p, .cartao-verso p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #e2e8f0;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #64748b;
+  font-size: 0.9rem;
 }
